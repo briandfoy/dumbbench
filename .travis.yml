@@ -18,6 +18,7 @@ before_install:
     - source ~/travis-perl-helpers/init --auto
 
 install:
+    - cpanm Devel::Cover@1.23
     - cpanm --quiet --installdeps --notest .
     - cpanm --quiet --notest Devel::Cover::Report::Coveralls
 
