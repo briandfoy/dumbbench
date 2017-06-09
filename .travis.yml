@@ -1,5 +1,8 @@
 sudo: false
 
+env:
+    - DEVEL_COVER_UNSUPPORTED=1
+
 language: perl
 perl:
     - "5.8"
