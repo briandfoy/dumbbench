@@ -1,5 +1,10 @@
 Revision history for Perl module Dumbbench
 
+0.10_02 2017-06-15T08:40:48Z
+	* add --simple switch to use flat floating point instead of 
+	scientific notation
+	* various distro refreshes
+
 0.10_01 2017-06-07T22:17:26Z
 	* Bump to test version to see what CPAN Testers says
 
