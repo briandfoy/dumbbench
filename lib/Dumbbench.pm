@@ -238,12 +238,14 @@ sub _run {
 }
 
 sub report {
-  my $self = shift;
-  my $raw = shift;
-  my $simple = shift;
+  my ( $self, $raw, $options ) = @_;
+  $options ||= {};
+  Carp::carp( "The second option to report was not a hash ref" )
+    unless ref $options eq ref {};
+
   foreach my $instance ($self->instances) {
     my $result = $instance->result;
-    my $result_str = ($simple) ? unscientific_notation($result) : "$result";
+    my $result_str = ($options->{float}) ? unscientific_notation($result) : "$result";
 
     if (not $raw) {
       my $mean = $result->raw_number;
