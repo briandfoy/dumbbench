@@ -8,7 +8,7 @@
 
 =for HTML <a href="https://github.com/briandfoy/dumbbench/blob/master/LICENSE"><img src="https://img.shields.io/cpan/l/Dumbbench.svg" /></a>
 
-=for HTML <a href="http://www.metacpan.org/module/Dumbbench"><img src="https://img.shields.io/cpan/v/Dumbbench.svg" /></A>
+=for HTML <a href="https://metacpan.org/pod/Dumbbench"><img src="https://img.shields.io/cpan/v/Dumbbench.svg" /></A>
 
 =head1 The Dumbbench module
 
@@ -21,7 +21,7 @@ for any Perl module.
 
 To read about L<Dumbbench>, look at the embedded documentation
 in the module itself. Inside the distribution, you can format it
-with L<perldoc|http://perldoc.perl.org/perldoc.html>:
+with L<perldoc|https://perldoc.perl.orgperldoc.html>:
 
 	% perldoc lib/Dumbbench.pm
 
@@ -32,13 +32,13 @@ name instead of the file location:
 
 You can read the documentation and inspect the meta data on one of the
 CPAN web interfaces, such as L<CPAN Search|http://search.cpan.org/dist/Dumbbench> or
-L<MetaCPAN|http://www.metacpan.org/module/Dumbbench>:
+L<MetaCPAN|https://metacpan.org/pod/Dumbbench>:
 
 =over 4
 
 =item *	L<http://search.cpan.org/dist/Dumbbench>
 
-=item *	L<http://www.metacpan.org/module/Dumbbench>
+=item *	L<https://metacpan.org/pod/Dumbbench>
 
 =back
 
