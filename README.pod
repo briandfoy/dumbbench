@@ -30,17 +30,8 @@ name instead of the file location:
 
 	% perldoc Dumbbench
 
-You can read the documentation and inspect the meta data on one of the
-CPAN web interfaces, such as L<CPAN Search|http://search.cpan.org/dist/Dumbbench> or
-L<MetaCPAN|https://metacpan.org/pod/Dumbbench>:
-
-=over 4
-
-=item *	L<http://search.cpan.org/dist/Dumbbench>
-
-=item *	L<https://metacpan.org/pod/Dumbbench>
-
-=back
+You can read the documentation and inspect the meta data on
+L<MetaCPAN|https://metacpan.org/pod/Dumbbench>.
 
 The standard module documentation has example uses in the SYNOPSIS
 section, but you can also look in the I<examples/> directory (if it's
