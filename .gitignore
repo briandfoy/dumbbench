@@ -37,3 +37,4 @@ pm_to_blib
 *.png
 .root_hist
 .soot_hist
+*.icould
