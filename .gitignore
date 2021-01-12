@@ -38,3 +38,6 @@ pm_to_blib
 .root_hist
 .soot_hist
 *.icould
+MANIFEST*[123456789]
+Changes*[123456789]
+
