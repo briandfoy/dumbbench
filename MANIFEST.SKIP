@@ -63,3 +63,6 @@
 
 \.travis.yml
 \.releaserc
+\bMANIFEST\s\d
+\bChanges\s\d
+
