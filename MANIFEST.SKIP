@@ -61,7 +61,7 @@
 # Avoid archives of this distribution
 \bDumbbench-[\d\.\_]+
 
-\\.releaserc
+\.?releaserc
 \bMANIFEST\s\d
 \bChanges\s\d
 \.icloud$
