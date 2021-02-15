@@ -151,15 +151,19 @@ sub cmpthese {
 
   my @cols = map $_->[0], @sort_res;
   my @rows = (
-    ['', 'Rate', @cols]
+    ['', 'Rate/s', 'Precision/s', @cols]
   );
 
   foreach my $record (@sort_res) {
     my ($name, $bench, $rate) = @$record;
-    my $rstr = $bench->_rate_str($rate) . '/s';
+    my $rstr = $bench->_rate_str($rate);
+
     $rstr =~ s/\s+//g;
+
+    my @rstr = split /\+-/, $rstr;
+
     my @row;
-    push @row, $name, $rstr;
+    push @row, $name, @rstr;
 
     foreach my $cmp_record (@sort_res) {
       my ($cmp_name, $cmp_bench, $cmp_rate) = @$cmp_record;
