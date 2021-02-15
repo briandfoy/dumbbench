@@ -275,8 +275,7 @@ sub report {
 
 sub box_plot {
   my $self = shift;
-  eval "require Dumbbench::BoxPlot;";
-  return() if $@;
+  require Dumbbench::BoxPlot;
 
   return Dumbbench::BoxPlot->new($self);
 }
@@ -398,7 +397,9 @@ method for accessing the numeric benchmark results.
 
 =head2 box_plot
 
-Returns a L<Dumbbench::BoxPlot> instance.
+Returns a L<Dumbbench::BoxPlot> instance. Note that you need L<SOOT>
+installed to use that module, but this does not require it as a
+prerequisite since it's not a trivial installation.
 
 A L<Dumbbench::BoxPlot> is a nice an easy way to get a graphic chart if
 you're in the mood instead of getting the same results from C<report>.
@@ -406,7 +407,7 @@ you're in the mood instead of getting the same results from C<report>.
 If you don't want to get into the details of L<Dumbbench::BoxPlot>, you can do:
 
   # $bench is your Dumbbench instance
-  $bench->box_plot->show;
+  eval { $bench->box_plot->show };
 
 =head1 HOW IT WORKS AND WHY IT DOESN'T
 
