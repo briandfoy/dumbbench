@@ -258,7 +258,7 @@ sub report {
         scalar(@{$instance->timings})-$result->nsamples
       );
       printf(
-        "%sRounded run time per iteration: %s (%.1f%%)\n",
+        "%sRounded run time per iteration (seconds): %s (%.1f%%)\n",
         $name,
         $result_str,
         $sigma/$mean*100
@@ -303,7 +303,7 @@ This will start churning for a while and then prints something like:
 
   Ran 23 iterations of the command.
   Rejected 3 samples as outliers.
-  Rounded run time per iteration: 9.519e-01 +/- 3.7e-03 (0.4%)
+  Rounded run time per iteration (seconds): 9.519e-01 +/- 3.7e-03 (0.4%)
 
 As a module:
 
