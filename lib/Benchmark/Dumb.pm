@@ -475,9 +475,9 @@ Optionally calls C<timethese()>, then outputs a comparison chart.  This:
 
 outputs a chart like:
 
-                   Rate        b      a
-  b   5.75e+06+-47000/s       -- -70.1%
-  a 1.925e+07+-650000/s 235+-12%     --
+		 Rate/s Precision/s       a       b
+	a -3.59e+07       6e+06      -- -535.3%
+	b  8.24e+06      220000 -123.0%      --
 
 This chart is sorted from slowest to fastest, and shows the percent speed difference between each pair of tests
 as well as the uncertainties on the rates and the relative speed difference. The uncertainty on a speed difference
@@ -497,11 +497,11 @@ Returns a reference to an ARRAY of rows, each row is an ARRAY of cells from the 
 
 returns a data structure like:
 
-  [
-    [ '',                 'Rate',        'b',      'a' ],
-    [ 'b',   '5.75e+06+-47000/s',       '--', '-70.1%' ],
-    [ 'a', '1.925e+07+-650000/s', '235+-12%',     '--' ],
-  ]
+        [
+          [ '', 'Rate/s', 'Precision/s', 'a', 'b' ],
+          [ 'a', '-4.43e+06', '120000', '--', '93+-6.9%' ],
+          [ 'b', '-2.294e+06', '52000', '-48.2%', '--' ]
+        ];
 
 =head1 METHODS
 
