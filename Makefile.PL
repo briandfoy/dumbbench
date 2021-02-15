@@ -67,15 +67,15 @@ my %WriteMakefile = (
 		},
 
 	'PREREQ_PM'     => {
-		'Number::WithError' => '1.00',
-		'Class::XSAccessor' => '1.05',
-		'Carp'              => '0',
-		'Time::HiRes'       => '0',
 		'Capture::Tiny'     => '0',
+		'Carp'              => '0',
+		'Class::XSAccessor' => '1.05',
+		'Devel::CheckOS'    => '0',
+		'Number::WithError' => '1.00',
 		'Params::Util'      => '0',
 		'parent'            => '0',
 		'Statistics::CaseResampling' => '0.06',
-		'Devel::CheckOS'    => '0',
+		'Time::HiRes'       => '0',
 		},
 
 	'META_MERGE' => {
