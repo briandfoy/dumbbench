@@ -52,7 +52,7 @@ my %WriteMakefile = (
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'Steffen Mueller <smueller@cpan.org>',
 
-    'EXE_FILES' => ['bin/dumbbench'],
+	'EXE_FILES' => ['bin/dumbbench'],
 
 	'CONFIGURE_REQUIRES' => {
 		'ExtUtils::MakeMaker'   => '6.64',
