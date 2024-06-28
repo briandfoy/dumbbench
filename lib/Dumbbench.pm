@@ -313,9 +313,9 @@ As a module:
     initial_runs         => 20,    # the higher the more reliable
   );
   $bench->add_instances(
-    Dumbbench::Instance::Cmd->new(command => [qw(perl -e 'something')]),
-    Dumbbench::Instance::PerlEval->new(code => 'for(1..1e7){something}'),
-    Dumbbench::Instance::PerlSub->new(code => sub {for(1..1e7){something}}),
+    Dumbbench::Instance::Cmd->new(name => 'fork', command => [qw(perl -e 'something')]),
+    Dumbbench::Instance::PerlEval->new(name => 'eval', code => 'for(1..1e7){something}'),
+    Dumbbench::Instance::PerlSub->new(name => 'sub', code => sub {for(1..1e7){something}}),
   );
   # (Note: Comparing the run of externals commands with
   #  evals/subs probably isn't reliable)
@@ -374,12 +374,28 @@ as argument. Each of those is one I<benchmark>, really.
 They are run in sequence and reported separately.
 
 Right now, there are the following C<Dumbbench::Instance> implementations:
-L<Dumbbench::Instance::Cmd> for running/benchmarking external commands,
-L<Dumbbench::Instance::PerlEval> for running/benchmarking
-Perl code in this same process using C<eval>,
-and
-L<Dumbbench::Instance::PerlSub> for running/benchmarking
-Perl code in this same process using a subroutine reference.
+
+=over
+
+=item *
+
+L<Dumbbench::Instance::Cmd> for running/benchmarking external commands.
+
+=item *
+
+L<Dumbbench::Instance::PerlEval> for running/benchmarking Perl code in this same
+process using C<eval>.
+
+=item *
+
+L<Dumbbench::Instance::PerlSub> for running/benchmarking Perl code in this same
+process using a subroutine reference.
+
+=back
+
+You probably want to pass a C<name> parameter to the C<new> method of each
+L<Dumbbench::Instance> subclasses. That will make clearer in the C<report>
+output which line corresponds to which instance passed.
 
 =head2 run
 
