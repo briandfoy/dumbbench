@@ -532,17 +532,41 @@ robust estimates of the run time of meaningless benchmarks instead.
 
 =head1 SEE ALSO
 
-L<Dumbbench::Instance>,
-L<Dumbbench::Instance::Cmd>,
-L<Dumbbench::Instance::PerlEval>,
-L<Dumbbench::Instance::PerlSub>,
+=over
+
+=item *
+
+L<Dumbbench::Instance>
+
+=item *
+
+L<Dumbbench::Instance::Cmd>
+
+=item *
+
+L<Dumbbench::Instance::PerlEval>
+
+=item *
+
+L<Dumbbench::Instance::PerlSub>
+
+=item *
+
 L<Dumbbench::Result>
+
+=item *
 
 L<Benchmark>
 
+=item *
+
 L<Number::WithError> does the Gaussian error propagation.
 
+=item *
+
 L<http://en.wikipedia.org/wiki/Median_absolute_deviation>
+
+=back
 
 =head1 AUTHOR
 
