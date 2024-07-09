@@ -3,7 +3,7 @@ use warnings;
 use Dumbbench;
 
 use Test::More tests => 2;
-our $PlotTimings = $ENV{DUMBBENCH_PLOT_TIMINGS} // 1;
+our $PlotTimings = defined $ENV{DUMBBENCH_PLOT_TIMINGS} ? $ENV{DUMBBENCH_PLOT_TIMINGS} : 1;
 
 my $soot_available = eval { require SOOT };
 if( $PlotTimings ) {
