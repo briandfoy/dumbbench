@@ -3,7 +3,13 @@ use warnings;
 use Dumbbench;
 
 use Test::More tests => 2;
-our $PlotTimings = 1;
+our $PlotTimings = $ENV{DUMBBENCH_PLOT_TIMINGS} // 1;
+
+my $soot_available = eval { require SOOT };
+if( $PlotTimings ) {
+  print "plot timings were enabled but SOOT is not available. No plots for you.\n";
+  $PlotTimings = 0;
+}
 
 my $b = Dumbbench->new(
   verbosity => 3,
