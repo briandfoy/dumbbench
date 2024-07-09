@@ -55,7 +55,7 @@ cmp_ok(
   '<=',
   $res[1]->number + 2*$res[1]->error->[0]
 );
-};
+}
 
 
 if ($PlotTimings) {
