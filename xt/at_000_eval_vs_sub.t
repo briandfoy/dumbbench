@@ -45,6 +45,7 @@ foreach my $instance ($b->instances) {
 # This test appears to be very fragile as it differs in milliseconds,
 # so other things can interfere to move the numbers around.
 TODO: {
+local $TODO = "Unpredictable timings, so this doesn't quite work";
 cmp_ok(
   $res[0]->number + 2*$res[0]->error->[0],
   '>=',
