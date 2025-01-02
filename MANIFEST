@@ -22,6 +22,7 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 r/boxplot.r
 README.pod
+SECURITY.md
 simulator/cfg/fast.yml
 simulator/cfg/simple.yml
 simulator/cfg/slow.yml
