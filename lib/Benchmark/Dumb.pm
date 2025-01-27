@@ -13,7 +13,7 @@ our @CARP_NOT = qw(
   Dumbbench::Result
 );
 
-our $VERSION = '0.505';
+our $VERSION = '0.506';
 
 require Exporter;
 

@@ -4,7 +4,7 @@ use warnings;
 use Carp ();
 use Time::HiRes ();
 
-our $VERSION = '0.505';
+our $VERSION = '0.506';
 
 require Dumbbench::Result;
 require Dumbbench::Stats;
