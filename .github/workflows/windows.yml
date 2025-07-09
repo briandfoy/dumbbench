@@ -88,7 +88,7 @@ jobs:
                 echo "C:\strawberry\perl\site\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
                 echo "C:\strawberry\perl\bin"      | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
             - name: Perl version
-              run: perl -V && gcc --version
+              run: perl -V
 # cpan can operate with https, but we need IO::SSL::Socket, which
 # does not come with Perl.
 #
